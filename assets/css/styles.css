@@ -1,0 +1,25 @@
+.header-image{
+    padding-top: 1em;
+    width:1400px;
+    height: 400px;
+}
+
+body i {
+    font-family:'FontAwesome'!important;
+}
+
+.request-btn{
+    padding-top: 1em;
+    color: white;
+}
+
+.request-info-text{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.sub-image{
+    padding-top: 1em;
+    width:1300px;
+    height: 400px;
+}
