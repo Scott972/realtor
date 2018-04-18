@@ -19,15 +19,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </a>
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="/admin">Admin</a>
+            <a class="nav-link" href="/admin/dashboard">Admin</a>
         </li>
+        <?
+        /**if admin we want to add a logout option and notification manager**/
+        if(isset($admin)):?>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/authenticate/logout">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/dashboard/notifications">Notifications</a>
+            </li>
+        <?endif;?>
     </ul>
 </nav>
 <body class="container">
 
 <?
-/**dont want the image if admin is viewing**/
-if($this->router->fetch_class() != 'admin'):?>
+/**dont want the image if admin is viewing. ideally in a production environment each component would have its own header/footers**/
+if(($this->router->fetch_class() != 'dashboard') && ($this->router->fetch_class() != 'authenticate')):?>
 <div class="row">
     <div class="col-md-12">
         <img src="/assets/images/home.jpg" alt="driveway"

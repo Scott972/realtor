@@ -36,7 +36,7 @@ class InfoRequest extends CI_Model{
     }
 
     /**
-     * @param $infoRequest
+     * @param array $infoRequest
      * @return bool
      * 
      * INSERTS a new row into info_request

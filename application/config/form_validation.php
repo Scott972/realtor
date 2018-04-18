@@ -18,7 +18,10 @@ $config = array(
         array('field' => 'phone', 'label' => 'Phone', 'rules' => 'trim|required'),
         array('field' => 'budget', 'label' => 'Maximum Budget', 'rules' => 'trim|required|numeric'),
         array('field' => 'captcha', 'rules' => 'trim|required'),
-
+    ),
+    'auth' => array(
+        array('field' => 'username', 'label' => 'Username', 'rules' => 'required'),
+        array('field' => 'password', 'label' => 'Password', 'rules' => 'required'),
 
     )
 );

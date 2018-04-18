@@ -36,7 +36,7 @@ class Welcome extends CI_Controller
 
 
     /**
-     * @param $propertyId
+     * @param int $propertyId
      *
      * Loads information request form for selected property
      */
@@ -115,7 +115,7 @@ class Welcome extends CI_Controller
         if (!$this->captcha_lib->validateCaptcha($this->input->post('captcha'))) {
             $this->form_validation->set_message('required', 'Please Enter the text exactly as it appears');
             $this->session->set_flashdata('error', 'Please type the text from the image exactly as it appears');
-            redirect('/welcome/requestInfo/1');
+            redirect('/welcome/requestInfo/'.$this->input->post('property_id'));
         }
 
     }
@@ -149,7 +149,7 @@ class Welcome extends CI_Controller
     }
 
     /**
-     * @param $infoRequest
+     * @param array $infoRequest
      *
      * Calls to send an admin an notification
      */
